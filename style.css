@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Katuri';
+    src: url('Katuri.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JNE-Bareun-TTF-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-1@1.0/JNE-Bareun-TTF-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+html,body{
+    padding:6px;margin:0;
+}
+h1,h2,h3,h4,h5{
+    margin:10px;
+}
+body{
+    font-family: 'JNE-Bareun-TTF-Bold','gulim','ms pgothic','monospace';
+    font-size:13px;
+    color:#5d4039;
+    line-height:1.8em;
+}
+.wrapper{
+    width:900px;
+    margin:auto;
+}
+header{
+    
+    color:gray;
+    display:flex;
+    align-items: center;
+    text-align: left;
+    width:100%;
+    height:50px;
+}
+header h1{
+    font-size:25px;
+    display:inline-block;
+    font-family: 'Katuri';
+    color:#c0fdc2;
+    margin:5px 10px;
+    -webkit-text-stroke: 1px black;
+}
+.navbar{
+    background: linear-gradient(#adda6e,#41992f);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width:100%;
+    height:50px;
+    border-radius: 5px;
+}
+.navbar a{
+    border:1.6px solid black;
+    color:white;
+    font-size:21px;
+    text-decoration: none;
+    font-family: 'Katuri';
+    -webkit-text-stroke: 0.7px black;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:70%;
+    margin: 0 10px;
+    
+    background: inherit;
+    flex:1;
+    transition: all .2s;
+}
+.navbar a:hover{
+    z-index: 10;
+    filter:brightness(130%);
+    transform: scale(1.1);
+}
+.navbar a:active{
+    transform: scale(1.05);
+}
+main{
+    margin-top:5px;
+    width:100%;
+}
+
+.maingrid section{
+    border:1px solid lightgray;
+    position:relative;
+    border-radius: 5px;
+}
+
+.maingrid section>h2{
+    font-size:21px;
+    text-decoration: green dashed underline 2px;
+} 
+
+
+footer{
+    width:100%;
+    color:gray;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom:20px;
+}
+
+.subheader{
+    background: linear-gradient(#adda6e,#41992f);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width:100%;
+    height:50px;
+    border-radius: 5px 5px 0 0;
+}
+.subheader>h2{
+    font-size:25px;
+    font-family: 'Katuri';
+    color:#c0fdc2;
+    -webkit-text-stroke: 1px black;
+}
+.bordered{
+    border-radius: 9px;
+    border:4px groove green;
+    margin:10px;
+}
+
+.endmarker{
+    display: block;
+    text-align: center;
+    padding:15px;
+    margin: auto;
+}
+
+p{
+    padding:6px;
+}
+
+.styledlist{
+    list-style-image: url("planet.png");
+}
+
+
+.button{
+    border:1.2px solid black;
+    color:white;
+    font-size:15px;
+    text-decoration: none;
+    font-family: 'Katuri';
+    -webkit-text-stroke: 0.3px black;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:5px 10px;
+    
+    background: linear-gradient(#adda6e,#41992f);
+    transition: all .2s;
+}
+.button:hover{
+    z-index: 10;
+    filter:brightness(130%);
+    transform: scale(1.1);
+}
+.button:active{
+    transform: scale(1.05);
+}
