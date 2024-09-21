@@ -1,12 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>who the fuck is mia</title>
-    </head>
-    <body>
-        kgajklgjlskjf
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>this is like my third site</title>
+    <style>
+        .maingrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+            gap:5px;
+            height:900px;
+        }
+
+        .about { grid-area: 1 / 1 / 5 / 4; }
+        .side { grid-area: 1 / 4 / 7 / 5; }
+        .sec1 { grid-area: 5 / 1 / 9 / 3; }
+        .sec2 { grid-area: 5 / 3 / 9 / 4; }
+        .sec3 { grid-area: 7 / 4 / 9 / 5; }
+        .sec4 { grid-area: 9 / 1 / 12 / 2; }
+        .sec5 { grid-area: 9 / 2 / 12 / 5; }
+        .bottom { grid-area: 12 / 1 / 13 / 5; }
+
+        .side a{
+            transition: all .1s;
+            background-color: rgba(255,255,255,0.6);
+            display:block;
+        }
+        .side a:hover:nth-child(even){
+            filter:brightness(90%);
+            transform: rotateZ(2deg);
+            font-size: 1.1em;
+        }
+        .side a:hover:nth-child(odd){
+            filter:brightness(90%);
+            transform: rotateZ(-2deg);
+            font-size: 1.1em;
+        }
+
+        #searchbar > input[type="text"]{
+            font-family: inherit;
+            padding-left:5px;
+            margin-left:40px;
+            height:30px;
+            width:300px;
+            transition: all .2s;
+        }
+        #searchbar > input[type="submit"]{
+            height:30px;
+            padding:0 10px;
+            margin:0;
+            background: linear-gradient(#adda6e,#41992f);
+            color:green;
+            border:1.6px solid black;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: all .1s;
+        }
+        #searchbar > input[type="submit"]:active{
+            filter: brightness(80%);
+        }
+        #searchbar > input[type="text"]:focus{
+            outline: 2px dotted green;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="#"><h1>microbenggu place</h1></a> <img src="logo.png" style="height:100%"> -- <span id="tagline" style="font-style: italic;">"it sure is great here"</span>
+            <form id="searchbar">
+                <input type="text" placeholder="totally necessary search bar">
+                <input type="submit" value="Go!">
+            </form>
+        </header>
+        <nav class="navbar">
+            <a href="#">writings</a>
+            <a href="#">fun and games</a>
+            <a href="#">gallery</a>
+            <a href="#">smoking room</a>
+        </nav>
+        <main class="maingrid">
+            <section class="about">
+                <img src="alienhi.png" class="bordered" style="float:left;width:300px">
+                <h2>Welcome to the <i>Beng Zone</i></h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, nulla quia reprehenderit doloribus aut, ea ab voluptatem temporibus ratione consequuntur obcaecati eveniet nesciunt harum maiores non laudantium in veritatis iure.
+                Natus, in suscipit eu</p>
+                <img src="ufo.png" class="endmarker">
+                <center>aliens here to steal your sheep</center>
+            </section>
+            <section class="side">
+                <nav class="styledlist">
+                    <h2>some more links</h2>
+                    <ul>
+                        <a href="#"><li>music recs!</li></a>
+                        <a href="#">
+                            <li>flash games</li>
+                        </a>
+                        <a href="#">
+                            <li>graphics</li>
+                        </a>
+                        <a href="#"><li>resources for your site</li></a>
+                        <a href="#"><li>buttons</li></a>
+                        <a href="#"><li>tumblr</li></a>
+                        <a href="#"><li>some books i read</li></a>
+                    </ul>
+                </nav>
+                <h3>important video</h3>
+                <iframe width="90%" height="auto" src="https://www.youtube-nocookie.com/embed/cl-4fYcz-ns?si=idCudHSrfk-Hw67j" title="YouTube video player" frameborder="0" style="display:block;margin:auto"></iframe>
+            </section>
+            <section class="sec1">
+                <div class="subheader"><h2>lastest blog posts</h2></div>
+                <p>yeah what it says on the header</p>
+            </section>
+            <section class="sec2">
+                <div class="subheader"><h2>gamez</h2></div>
+                <p>flash games and such</p>
+            </section>
+            <section class="sec3">
+                <div class="subheader"><h2>take a chance?</h2></div>
+                <p>this is where a button that takes you to a random page will go</p>
+            </section>
+            <section class="sec4">
+                <div class="subheader"><h2>portal</h2></div>
+                <p>fascinating sites on the internet</p>
+                <button class="button" style="display:flex;width:100px;margin:auto;margin-bottom:10px;" onclick="generatesite()">Roll!</button>
+                <div style="display:inline-flex;text-align:center;justify-content:center;align-items:center;background: lightgray;border:1px solid gray;border-radius:5px;margin:10px;width:200px;height:50px;">
+                    <a target="_blank" style="color:darkblue;font-size:12px;line-height: 10px;overflow-wrap: anywhere;" id="randomSiteDisplay">aw yeah</a>
+                </div>
+                
+                
+                
+                
+                <script>
+                    const ranSiteGen=document.getElementById("randomSiteDisplay");
+                    const sites=["https://crouton.net/","http://www.staggeringbeauty.com/","https://pixelsfighting.com/","https://r33b.net/",
+                    "https://waitbutwhy.com/","https://old.reddit.com/r/THE_PACK/","https://old.reddit.com/r/fifthworldproblems/",
+                    "https://pointerpointer.com/","https://fogu.com/","https://www.kohney.com/","https://cartoon-aa.xyz/frog","https://www.angelfire.com/sd/chocolaholic1/",
+                    "https://adventuretimereviewed.wordpress.com/","https://www.mattalamode.com/"];
+                    var x=-1;
+                    var k=-1;
+                function generatesite(){
+                    while(x==k){
+                        k=Math.floor(Math.random() * sites.length);
+                    }
+                    x=k;
+                    ranSiteGen.href=sites[x];
+                    ranSiteGen.innerHTML=sites[x];
+                }
+                </script>
+            </section>
+            <section class="sec5">
+                <div class="subheader"><h2>graphics display</h2></div>
+                <p>and a see more.... over here</p>
+            </section>
+            <section class="bottom">
+                <p>bar for my gallery</p>
+            </section>
+        </main>
+        <footer>
+            © microbenggu 2024 - hosted on github pages
+        </footer>
+    </div>
+</body>
 </html>
