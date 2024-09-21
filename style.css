@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Katuri';
-    src: url('Katuri.woff') format('woff');
+    src: url('/Katuri.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'CookieRun-Regular';
-    src: url('CookieRun-Regular.woff') format('woff');
+    src: url('/CookieRun-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -144,7 +144,7 @@ p{
 }
 
 .styledlist{
-    list-style-image: url("planet.png");
+    list-style-image: url("/graphics/planet.png");
 }
 
 
