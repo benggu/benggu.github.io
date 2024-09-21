@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/style.css" rel="stylesheet">
-    <title>the beng zone</title>
+    <title>this is like my third site</title>
     <style>
         .maingrid {
             display: grid;
@@ -39,47 +39,13 @@
             font-size: 1.1em;
         }
 
-        #searchbar > input[type="text"]{
-            font-family: inherit;
-            padding-left:5px;
-            margin-left:40px;
-            height:30px;
-            width:300px;
-            transition: all .2s;
-        }
-        #searchbar > input[type="submit"]{
-            height:30px;
-            padding:0 10px;
-            margin:0;
-            background: linear-gradient(#adda6e,#41992f);
-            color:green;
-            border:1.6px solid black;
-            border-radius: 5px;
-            font-family: inherit;
-            transition: all .1s;
-        }
-        #searchbar > input[type="submit"]:active{
-            filter: brightness(80%);
-        }
-        #searchbar > input[type="text"]:focus{
-            outline: 2px dotted green;
-        }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <a href="#"><h1>microbenggu place</h1></a> <img src="/logo.png" style="height:100%"> -- <span id="tagline" style="font-style: italic;">"it sure is great here"</span>
-            <form id="searchbar">
-                <input type="text" placeholder="totally necessary search bar">
-                <input type="submit" value="Go!">
-            </form>
         </header>
-        <nav class="navbar">
-            <a href="#">writings</a>
-            <a href="#">fun and games</a>
-            <a href="#">gallery</a>
-            <a href="#">smoking room</a>
+        <nav class="navbar" id="navbar">
         </nav>
         <main class="maingrid">
             <section class="about">
@@ -160,8 +126,9 @@
             </section>
         </main>
         <footer>
-            © microbenggu 2024 - hosted on github pages
         </footer>
     </div>
+
+    <script src="navbar.js"></script>
 </body>
 </html>
