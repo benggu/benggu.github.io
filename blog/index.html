@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" rel="stylesheet">
+    <title>this is like my third site</title>
+    <style>
+        .maingrid{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap:5px;
+            height:700px;
+        }
+        .sec1 { grid-area: 1 / 1 / 3 / 3; }
+        .sec2 { grid-area: 1 / 3 / 3 / 5; }
+        .sec3 { grid-area: 3 / 3 / 4 / 5; }
+        .sec4 { grid-area: 3 / 1 / 4 / 3; } 
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+        </header>
+        <nav class="navbar" id="navbar">
+        </nav>
+        <main class="maingrid">
+            <section class="sec1">
+                <div class="subheader"><h2>cartoons</h2></div>
+            </section>
+            <section class="sec2">
+                <div class="subheader"><h2>games</h2></div>
+            </section>
+            <section class="sec3">
+                <div class="subheader"><h2>photo log</h2></div>
+            </section>
+            <section class="sec4">
+                <div class="subheader"><h2>diary</h2></div>
+            </section>
+        </main>
+        <footer>
+            
+        </footer>
+    </div>
+    <script src="../navbar.js"></script>
+</body>
+</html>
