@@ -3,5 +3,5 @@ document.querySelector("header").innerHTML=`<a href="/"><h1>microbenggu place</h
                 <input type="text" placeholder="totally necessary search bar">
                 <input type="submit" value="Go!">
             </form>`
-document.getElementById("navbar").innerHTML=`<a href="/">home</a> <a href="#">writings</a> <a href="#">fun and games</a> <a href="#">smoking room</a>`
+document.getElementById("navbar").innerHTML=`<a href="/">home</a> <a href="/blog">writings</a> <a href="#">fun and games</a> <a href="#">smoking room</a>`
 document.querySelector("footer").innerHTML=`© microbenggu 2024 - hosted on github pages<br>contact me housepenbenggu@gmail.com`
