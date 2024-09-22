@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet">
+    <title>title</title>
+    <style>
+        .pagelist{
+            padding:20px;
+        }
+        .pagelist>a{
+            display:block;
+            height:60px;
+            border:1px solid black;
+            box-shadow:inset 10px 10px 10px rgba(255,255,255,0.6),inset -10px -10px 10px rgba(0,0,0,0.3);
+            background: green;
+            border-radius: 10px;
+            transition: all .2s;
+        }
+        .pagelist>a:hover{
+            transform:scale(1.1);
+            filter:brightness(90%);
+        }
+        h1{
+            font-size:25px;
+            display:inline-block;
+            font-family: 'Katuri';
+            color:#c0fdc2;
+            margin:5px 10px;
+            -webkit-text-stroke: 1px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+        </header>
+        <nav class="navbar" id="navbar">
+        </nav>
+        <main class="maingrid">
+            <section>
+                <h1>Wiki</h1>
+                <h2>Somewhat useless guides to some games I play</h2>
+                <div style="display:grid;grid-template-columns: 1fr 1fr 1fr;" class="pagelist">
+                    <a href="/wiki/animal-crossing/" style="background: url('/wiki/animal-crossing/grasspat.png');">
+                        <h1>Animal Crossing</h1>
+                    </a>
+                </div>
+                
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </div>
+    <script src="/navbar.js"></script>
+</body>
+</html>
